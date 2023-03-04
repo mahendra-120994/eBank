@@ -25,7 +25,11 @@ class Login extends Component {
   submitForm = async event => {
     event.preventDefault()
     const {userId, pin} = this.state
-    const userDetails = {userId, pin}
+//     const userDetails = {userId, pin}
+    const userDetails = {
+      user_id: userId,
+      pin: userPin,
+    }
     const url = 'https://apis.ccbp.in/ebank/login'
     const options = {
       method: 'POST',
